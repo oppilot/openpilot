@@ -246,7 +246,6 @@ class CarInterface(CarInterfaceBase):
         ret.safetyParam = 53 #needs to have its own DBC, shane please help, line 410 
         ret.steerActuatorDelay = 0.60
         ret.steerRatio = 15.33
-        ret.steerLimitTimer = 5.0
         tire_stiffness_factor = 0.996  # not optimized yet
         ret.lateralTuning.init('indi')
         ret.lateralTuning.indi.innerLoopGain = 15.0
