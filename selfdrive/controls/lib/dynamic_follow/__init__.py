@@ -333,7 +333,7 @@ class DynamicFollow:
       self.dp_dynamic_follow, self.dp_dynamic_follow_last_modified = param_get_if_updated("dp_dynamic_follow", "int", self.dp_dynamic_follow, self.dp_dynamic_follow_last_modified)
       self.global_df_mod, self.dp_dynamic_follow_multiplier_last_modified = param_get_if_updated("dp_dynamic_follow_multiplier", "float", self.global_df_mod, self.dp_dynamic_follow_multiplier_last_modified)
       if self.global_df_mod != 1.:
-        self.global_df_mod = clip(self.global_df_mod, .85, 1.2)
+        self.global_df_mod = clip(self.global_df_mod, .85, 10.0)
       self.min_TR, self.dp_dynamic_follow_min_tr_last_modified = param_get_if_updated("dp_dynamic_follow_min_tr", "float", self.min_TR, self.dp_dynamic_follow_min_tr_last_modified)
       if self.min_TR != .9:
         self.min_TR = clip(self.min_TR, .85, 1.6)
