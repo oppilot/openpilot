@@ -76,10 +76,10 @@ class opParams:
                         #'alca_nudge_required': Param(False, bool, "Require nudge to start ALC"),
                         #'autoUpdate': Param(True, bool, 'Whether to auto-update'),
                         #'camera_offset': Param(0.06, VT.number, 'Your camera offset to use in lane_planner.py', live=True),
-                        'curvature_factor': Param(1.2, VT.number, 'Multiplier for the curvature slowdown. Increase for less braking.'),
+                        'curvature_factor': Param(3.0, VT.number, 'Multiplier for the curvature slowdown. Increase for less braking.'),
                         'cloak': Param(True, bool, "make comma believe you are on their fork"),
                         #'corolla_tss2_d_tuning': Param(False, bool, 'lateral tuning using PID w/ true derivative'),
-                        'default_brake_distance': Param(250.0, VT.number, 'Distance in m to start braking for mapped speeds.'),
+                        'default_brake_distance': Param(90.0, VT.number, 'Distance in m to start braking for mapped speeds.'),
                         #'enable_long_derivative': Param(False, bool, 'If you have longitudinal overshooting, enable this! This enables derivative-based\n'
                                                                     # 'integral wind-down to help reduce overshooting within the long PID loop'),
                         #'dynamic_follow': Param('normal', str, "Can be: ('close', 'normal', 'far'): Left to right increases in following distance.\n"
@@ -94,7 +94,7 @@ class opParams:
                         #'hotspot_on_boot': Param(False, bool, 'Enable Hotspot On Boot'),
                         'keep_openpilot_engaged': Param(True, bool, 'True is stock behavior in this fork. False lets you use the brake and cruise control stalk to disengage as usual'),
                         #'lat_d': Param(9.0, VT.number, 'The lateral derivative gain, default is 9.0 for TSS2 Corolla. This is active at all speeds', live=True),
-                        'limit_rsa': Param(False, bool, "Switch off RSA above rsa_max_speed"),
+                        'limit_rsa': Param(True, bool, "Switch off RSA above rsa_max_speed"),
                         'interbridged': Param(False, bool, "ONLY USE IT FOR TESTING PURPOSE. You are responsible for your own action. we do not recommend using it if you don't know what youre doing"),
                         #'ludicrous_mode': Param(False, bool, 'Double overall acceleration!'),
                         'mpc_offset': Param(0.0, VT.number, 'Offset model braking by how many m/s. Lower numbers equals more model braking', live=True),
@@ -103,12 +103,12 @@ class opParams:
                         'osm': Param(True, bool, 'Whether to use OSM for drives'),
                         'prius_pid': Param(False, bool, 'This enables the PID lateral controller with new a experimental derivative tune\nFalse: stock INDI, True: TSS2-tuned PID'),
                         'rolling_stop': Param(False, bool, 'If you do not want stop signs to go down to 0 kph enable this for 9kph slow down'),
-                        'rsa_max_speed': Param(24.5, VT.number, 'Speed limit to ignore RSA in m/s'),
-                        'smart_speed': Param(True, bool, 'Whether to use Smart Speed for drives above smart_speed_max_vego'),
+                        'rsa_max_speed': Param(26.8, VT.number, 'Speed limit to ignore RSA in m/s'),
+                        'smart_speed': Param(False, bool, 'Whether to use Smart Speed for drives above smart_speed_max_vego'),
                         'smart_speed_max_vego': Param(26.8, VT.number, 'Speed limit to ignore Smartspeed in m/s'),
                         #'spairrowtuning': Param(False, bool, 'INDI Tuning for Corolla Tss2, set steer_up_15 param to True and flash panda'),
-                        'speed_offset': Param(0, VT.number, 'Speed limit offset in m/s', live=True),
-                        'steer_actuator_delay': Param(0.5, VT.number, 'The steer actuator delay', live=True),
+                        'speed_offset': Param(2.12, VT.number, 'Speed limit offset in m/s', live=True),
+                        'steer_actuator_delay': Param(0.45, VT.number, 'The steer actuator delay', live=True),
                         #'steer_up_15': Param(False, bool, 'Increase rate of steering up to 15, may fault on some cars'),
                         #'traffic_light_alerts': Param(False, bool, "Switch off the traffic light alerts"),
                         'traffic_lights': Param(False, bool, "Should Openpilot stop for traffic lights"),
@@ -121,7 +121,7 @@ class opParams:
                         'update_behavior': Param('auto', str, 'Can be: (\'off\', \'alert\', \'auto\') without quotes\n'
                                                               'off will never update, alert shows an alert on-screen\n'
                                                               'auto will reboot the device when an update is seen'),
-                        'enable_indi_live': Param(False, bool, live=True),
+                        'enable_indi_live': Param(True, bool, live=True),
                         'indi_inner_gain_bp': Param([18, 22, 26], [list, float, int], live=True, depends_on='enable_indi_live'),
                         'indi_inner_gain_v': Param([9, 12, 15], [list, float, int], live=True, depends_on='enable_indi_live'),
                         'indi_outer_gain_bp': Param([18, 22, 26], [list, float, int], live=True, depends_on='enable_indi_live'),
@@ -130,7 +130,7 @@ class opParams:
                         'indi_time_constant_v': Param([1, 3, 4.5], [list, float, int], live=True, depends_on='enable_indi_live'),
                         'indi_actuator_effectiveness_bp': Param([18, 22, 26], [list, float, int], live=True, depends_on='enable_indi_live'),
                         'indi_actuator_effectiveness_v': Param([9, 12, 15], [list, float, int], live=True, depends_on='enable_indi_live'),
-                        'steer_limit_timer': Param(0.4, VT.number, live=True, depends_on='enable_indi_live')
+                        'steer_limit_timer': Param(5.0, VT.number, live=True, depends_on='enable_indi_live')
                        }
 
     self._params_file = '/data/op_params.json'
