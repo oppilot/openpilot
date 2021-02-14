@@ -58,8 +58,8 @@ confs = [
   {'name': 'dp_lead_car_alert', 'default': False, 'type': 'Bool', 'conf_type': ['param', 'struct']},
   {'name': 'dp_lead_car_away_alert', 'default': True, 'type': 'Bool', 'conf_type': ['param']},
   {'name': 'dp_dynamic_follow', 'default': 4, 'type': 'UInt8', 'min': 0, 'max': 4, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param', 'struct']},
-  {'name': 'dp_dynamic_follow_multiplier', 'default': 9.99, 'type': 'Float32', 'min': 0.85, 'max': 9.99, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param']},
-  {'name': 'dp_dynamic_follow_min_tr', 'default': 9.99, 'type': 'Float32', 'min': 0.85, 'max': 9.99, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param']},
+  {'name': 'dp_dynamic_follow_multiplier', 'default': 1.0, 'type': 'Float32', 'min': 0.85, 'max': 9.99, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param']},
+  {'name': 'dp_dynamic_follow_min_tr', 'default': 1.0, 'type': 'Float32', 'min': 0.85, 'max': 9.99, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param']},
   {'name': 'dp_dynamic_gas', 'default': True, 'type': 'Bool', 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param']},
   {'name': 'dp_accel_profile', 'default': 0, 'type': 'UInt8', 'min': 0, 'max': 3, 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param', 'struct']},
   # safety
