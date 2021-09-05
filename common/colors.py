@@ -1,4 +1,4 @@
-# mypy: ignore-errors
+# mypy: ignore-errors.
 class COLORS:
   def __init__(self):
     self.HEADER = '\033[95m'
