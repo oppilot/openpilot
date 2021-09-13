@@ -46,13 +46,13 @@ confs = [
   {'name': 'dp_steering_on_signal', 'default': False, 'type': 'Bool', 'depends': [{'name': 'dp_lat_ctrl', 'vals': [True]}], 'conf_type': ['param', 'struct']},
   {'name': 'dp_signal_off_delay', 'default': 0, 'type': 'UInt8', 'min': 0, 'max': 10, 'conf_type': ['param', 'struct']},
   # assist/auto lane change
-  {'name': 'dp_assisted_lc_min_mph', 'default': 45, 'type': 'Float32', 'min': 0, 'max': 255., 'conf_type': ['param', 'struct']},
+  {'name': 'dp_assisted_lc_min_mph', 'default': 1, 'type': 'Float32', 'min': 0, 'max': 255., 'conf_type': ['param', 'struct']},
   {'name': 'dp_auto_lc', 'default': False, 'type': 'Bool', 'conf_type': ['param', 'struct']},
   {'name': 'dp_auto_lc_cont', 'default': False, 'type': 'Bool', 'depends': [{'name': 'dp_auto_lc', 'vals': [True]}], 'conf_type': ['param', 'struct']},
-  {'name': 'dp_auto_lc_min_mph', 'default': 60, 'type': 'Float32', 'min': 0, 'max': 255., 'depends': [{'name': 'dp_auto_lc', 'vals': [True]}], 'conf_type': ['param', 'struct']},
-  {'name': 'dp_auto_lc_delay', 'default': 3, 'type': 'Float32', 'min': 0, 'max': 10., 'depends': [{'name': 'dp_auto_lc', 'vals': [True]}], 'conf_type': ['param', 'struct']},
+  {'name': 'dp_auto_lc_min_mph', 'default': 2, 'type': 'Float32', 'min': 0, 'max': 255., 'depends': [{'name': 'dp_auto_lc', 'vals': [True]}], 'conf_type': ['param', 'struct']},
+  {'name': 'dp_auto_lc_delay', 'default': 0, 'type': 'Float32', 'min': 0, 'max': 10., 'depends': [{'name': 'dp_auto_lc', 'vals': [True]}], 'conf_type': ['param', 'struct']},
   # long ctrl
-  {'name': 'dp_slow_on_curve', 'default': False, 'type': 'Bool', 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param', 'struct']},
+  {'name': 'dp_slow_on_curve', 'default': True, 'type': 'Bool', 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param', 'struct']},
   {'name': 'dp_allow_gas', 'default': True, 'type': 'Bool', 'depends': [{'name': 'dp_atl', 'vals': [False]}], 'conf_type': ['param', 'struct']},
   {'name': 'dp_max_ctrl_speed', 'default': 92., 'type': 'Float32', 'conf_type': ['param', 'struct']},
   {'name': 'dp_lead_car_alert', 'default': False, 'type': 'Bool', 'conf_type': ['param', 'struct']},
