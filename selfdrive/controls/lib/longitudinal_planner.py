@@ -261,8 +261,10 @@ class LongitudinalPlanner:
         y_dist = [1.5,  1.5,  1.51,  1.5,  1.5,  1.45]
         desired_tf = np.interp(v_ego, x_vel, y_dist)
       elif self.dp_following_profile == 2:
-        x_vel =  [0,    11,   13,   15,   25,   40]
-        y_dist = [1.75, 1.75, 1.77, 1.75, 1.8,  1.8]
+        #x_vel =  [0,    11,   13,   15,   25,   40]
+        #y_dist = [1.75, 1.75, 1.77, 1.75, 1.8,  1.8]
+        x_vel =  [0,     7.0,   25.0,   29.0]
+        y_dist = [1.5,   3.5,    4.0,    2.0]
         desired_tf = np.interp(v_ego, x_vel, y_dist)
     return desired_tf
 
