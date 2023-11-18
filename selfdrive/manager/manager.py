@@ -47,7 +47,7 @@ def manager_init() -> None:
     ("OpenpilotEnabledToggle", "1"),
     # ("ShowDebugUI", "0"),
     ("SpeedLimitControl", "1"),
-    ("SpeedLimitPercOffset", "0"),
+    ("SpeedLimitPercOffset", "1"),
     ("TurnSpeedControl", "1"),
     ("TurnVisionControl", "1"),
   ]
