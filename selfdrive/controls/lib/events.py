@@ -833,7 +833,7 @@ EVENTS: Dict[int, Dict[str, Union[Alert, AlertCallbackType]]] = {
 
   EventName.accFaulted: {
     ET.IMMEDIATE_DISABLE: ImmediateDisableAlert(_("Cruise Fault: Restart the Car")),
-    ET.PERMANENT: NormalPermanentAlert(_("Cruise Fault: Restart the car to engage")),
+    ET.PERMANENT: NormalPermanentAlert(_("Drive Safely")),
     ET.NO_ENTRY: NoEntryAlert(_("Cruise Fault: Restart the Car")),
   },
 
