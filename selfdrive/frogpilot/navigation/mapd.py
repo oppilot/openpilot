@@ -59,7 +59,7 @@ def get_latest_version():
         return json.loads(response.read().decode("utf-8"))["version"]
     except Exception as error:
       print(f"Error fetching mapd version from {url}: {error}")
-  return "v1.10.0-beta1"
+  return "v0"
 
 def mapd_thread():
   while True:
